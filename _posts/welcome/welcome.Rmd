@@ -1,14 +1,22 @@
 ---
-title: "Welcome to DataViz Makeover_1"
+title: "Welcome!"
 description: |
-  Welcome to our new blog, DataViz_Makeover_1. We hope you enjoy 
-  reading what we have to say!
+  Welcome to my blog. I will be updating this blog with Dataviz projects I have undertaken. Feel free to contact me via [email](mailto:stellaloh91@gmail.com) with any comments!
+preview: Image/data.jpeg
 author:
-  - name: Nora Jones 
-    url: https://example.com/norajones
-    affiliation: Spacely Sprockets
-    affiliation_url: https://example.com/spacelysprokets
+  - name: Stella Loh 
+    url: https://www.linkedin.com/in/stella-loh-308b72129/
+    affiliation: School of Information Systems, Singapore Management University
 date: 05-23-2021
+categories:
+  - welcome
+navbar:
+  logo: images/rstudio.png
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
 output:
   distill::distill_article:
     self_contained: false

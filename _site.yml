@@ -1,7 +1,7 @@
-name: "DataVizMakeover1"
-title: "DataViz_Makeover_1"
+name: "Stella's_Analytics_Blog"
+title: "Stella's Analytics Blog"
 description: |
-  DataViz_Makeover_1
+  Exploring and sharing Dataviz projects.
 output_dir: "_site"
 navbar:
   right:
@@ -9,4 +9,5 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+  search: true
 output: distill::distill_article

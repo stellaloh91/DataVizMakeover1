@@ -1,5 +1,5 @@
 ---
-title: "DataViz_Makeover_1"
+title: "Analytics Projects"
 site: distill::distill_website
 listing: posts
 ---

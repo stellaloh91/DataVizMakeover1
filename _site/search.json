@@ -2,18 +2,17 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this blog",
-      "description": "Some additional details about the blog",
+      "title": "Stella Loh",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-23T19:49:47+08:00"
+      "contents": "\r\n\r\n          \r\n          \r\n          Stella's Analytics Blog\r\n          \r\n          \r\n          Home\r\n          About\r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            Stella Loh\r\n          \r\n          \r\n            \r\n              I am a finance trained, aspiring data analyst living in Singapore. I currently work on the finance team at Nike Singapore. I am always up for a new adventure!\r\n            \r\n            \r\n              I am a finance trained, aspiring data analyst living in Singapore. I currently work on the finance team at Nike Singapore. I am always up for a new adventure!\r\n            \r\n          \r\n\r\n          \r\n            \r\n              \r\n                  \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                \r\n                              \r\n          \r\n\r\n          \r\n            \r\n              \r\n                                \r\n                  \r\n                    LinkedIn\r\n                  \r\n                \r\n                                \r\n                  \r\n                    GitHub\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Email\r\n                  \r\n                \r\n                              \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
+      "last_modified": "2021-05-25T02:27:32+08:00"
     },
     {
       "path": "index.html",
-      "title": "DataViz_Makeover_1",
+      "title": "Analytics Projects",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-23T19:49:48+08:00"
+      "last_modified": "2021-05-25T02:27:41+08:00"
     }
   ],
   "collections": ["posts/posts.json"]

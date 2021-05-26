@@ -1,8 +1,19 @@
 ---
-title: "About this blog"
-description: |
-  Some additional details about the blog
+title: "Stella Loh"
+image: Image/Stella.jpg
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/stella-loh-308b72129/"
+  - label: GitHub
+    url: "https://github.com/stellaloh91"
+  - label: Email
+    url: "mailto:stellaloh91@gmail.com"
+output:
+  postcards::jolla
 ---
+
+I am a finance trained, aspiring data analyst living in Singapore. I currently work on the finance team at Nike Singapore. I am always up for a new adventure!
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
