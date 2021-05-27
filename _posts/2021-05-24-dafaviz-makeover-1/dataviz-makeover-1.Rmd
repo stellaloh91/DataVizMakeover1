@@ -234,12 +234,21 @@ No  |Original Title           | Updated Title
 
 ![Figure 36: Edit Tooltip for Sum(Net Exports/Imports) Marks card](Image/tooltipnetexports.JPG)
 
+25. Align fonts used in graph to Tableau Light. Adjust size of labels and legends to <font size 9>.
+
 ### Dashboard
 
 1. Add sheets into dashboard- Drag the "Singapore's Trade with top 6 countries" sheet into the dashboard.
+
 2. Add commentary
+
 3. Add source
+   Using Objects > Text > drag to bottom of dashboard and add:
+   Source: Department of Statistics, Singapore (DOS)         (https://www.singstat.gov.sg/)
+   The raw data: https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data
+  
 4. Add author
-
-
+  Using Objects > Text > drag to bottom left of dashboard and add:
+  Dataviz Makeover 1| Stella Loh
+  
 ### Observations
