@@ -70,7 +70,8 @@ vi. **No tick marks for y-axis values** even though it's on a continuous scale.
 
 ### Advantages of proposed design
 
-3.1 Clarity
+### 3.1 Clarity
+
 i. Chart title is aligned with the chart content- chart shows only the relevant periods as aligned with title.
 
 ii. Chart axis is aligned across all 6 countries-
@@ -83,7 +84,7 @@ iv. Chart title provides audience with the big picture, followed by short commen
 
 v. Data source is included in chart.
 
-3.2 Aesthetics
+### 3.2 Aesthetics
 
 i. x-axis is aligned across each country's chart- this makes the visualisation more organised and allows users to compare the trends across time for each country.
 
@@ -97,19 +98,25 @@ v. Colors are consistent throughout the dashboard with clear legend on what they
 
 vi. Tick marks added to y-axis scale. Soft gridlines have also been added to the chart to provide reference but not to distract users.
 
-# 4. Data Visualisation Steps
+# 4. Final Visualisation
+
+### 4.1 Snapshot of dashboard
+
+![Figure 3: Snapshot of dashboard- full visualisation available at Tableau Public](Image/finalviz.JPG)
+
+# 5. Data Visualisation Steps
 
 1. After downloading the data, select data for the relevant countries from each dataset (import and export dataset) and paste into a new sheet using Microsoft Excel.
 
-![Figure 3: Extract relevant data](Image/countrydata.JPG)
+![Figure 4: Extract relevant data](Image/countrydata.JPG)
 
 2. Transpose the extracted import and export data, naming the date column as "Date" and value column as "Imports"/ "Exports" respectively.
 
-![Figure 4: Transposed data](Image/transposeddata.JPG)
+![Figure 5: Transposed data](Image/transposeddata.JPG){width=50%}
 
 3. Combine the transposed import and export data.
 
-![Figure 5: Combined data](Image/combineddata.JPG)
+![Figure 6: Combined data](Image/combineddata.JPG){width=50%}
 
 4. Perform the following actions:
 
@@ -117,130 +124,150 @@ No  |Variable     | Action
 ----|-------------| ----------------------------------------
 1   |Variables    | Rename column as "Country"
 2   |Variables    | Removed "(Thousand Dollars)" from value
-3   |Imports      | Rename column as "Imports (S$'000)"
-4   |Exports      | Rename column as "Exports (S$'000)"
+3   |Imports      | Rename column as "Imports (S\$'000)"
+4   |Exports      | Rename column as "Exports (S\$'000)"
 
-![Figure 6: Rename columns](Image/renamecolumns.JPG)
+![Figure 7: Rename columns](Image/renamecolumns.JPG){width=50%}
 
 After the above manipulations have been performed, save the data as "data_clean".
 
 
-### <Singapore's Trade with top 6 countries> sheet
+### 5.1 <Singapore's Trade with top 6 countries> sheet
 
 5. Import the data into Tableau.
 
-![Figure 7: Import data into tableau](Image/importtableau.JPG)
+![Figure 8: Import data into tableau](Image/importtableau.JPG){width=50%}
 
-6.Change data type- change Date data type to “Date”.
+6. Change data type- change Date data type to “Date”.
 
-![Figure 8: Create calculated field](Image/changedatefield.JPG)
+![Figure 9: Create calculated field](Image/changedatefield.JPG){width=75%}
 
-7. As we will be presenting the charts for 6 countries in the form of a trellis, we have to create 2 calculated fields called "x-axis" and "y-axis".
-    (a) Create a new calculated field and name it "x-axis", with the below formula (figure 8).
-    (b) Create another calculated field named "y-axis", with the below formula (figure 9).
+7. As we will be presenting the charts for six countries in the form of a trellis, we have to create two calculated fields called "x-axis" and "y-axis".
+    (a) Create a new calculated field and name it "x-axis", with the below formula (Figure 11).
+    (b) Create another calculated field named "y-axis", with the below formula (Figure 12).
 
-![Figure 9: Create calculated field](Image/createcalculatedfield.JPG)
-![Figure 10: x-axis formula](Image/x-axis-formula.JPG)
-![Figure 11: y-axis formula](Image/y-axis-formula.JPG)
+![Figure 10: Create calculated field](Image/createcalculatedfield.JPG){width=50%}
+
+![Figure 11: x-axis formula](Image/x-axis-formula.JPG)
+
+![Figure 12: y-axis formula](Image/y-axis-formula.JPG)
 
 7. Drag [Date] to columns and change selection to month. Change data type to continuous.
 
-![Figure 12: Drag date to columns](Image/datecolumn.JPG)
+![Figure 13: Drag date to columns](Image/datacolumn.JPG){width=50%}
 
 8. Drag [Exports($'000)] to rows, then drag [Imports($'000)] and drop it into the chart as seen in Figure 13 below. This creates a measure values shelf that appears in the data pane and contains all the measures of the data collected into one field. 
 
-![Figure 13: Drag exports and imports to rows](Image/fillrow.JPG)
+![Figure 14: Drag exports and imports to rows](Image/fillrow.JPG){width=50%}
 
 9. Drag the calculated fields [x-axis] and [y-axis] to Columns and Rows respectively.Convert both fields into discrete fields.
 
-![Figure 14: Update fields](Image/x-y-axis.JPG)
+![Figure 15: Update fields](Image/x-y-axis.JPG){width=75%}
 
 10.Drag [Country] into the marks card under detail.
 
-![Figure 15: Drag country into detail](Image/addcountry.JPG)
+![Figure 16: Drag country into detail](Image/addcountry.JPG){width=50%}
 
-10.Edit table calculation for both [x-axis] and [y-axis] calculated fields.Select computation using specific dimensions- by [Country] then by [Month of Date], at the level of [Country].
+10. Edit table calculation for both [x-axis] and [y-axis] calculated fields.Select computation using specific dimensions- by [Country] then by [Month of Date], at the level of [Country].
 
-![Figure 16: Edit table calculation for x-axis and y-axis fields](Image/x-axis-edit.JPG)
+![Figure 17: Edit table calculation for x-axis and y-axis fields](Image/x-axis-edit.JPG){width=50%}
 
 11. Create another calculated field named [Net exports/imports], with the below formula.
 
-![Figure 17: Net export/import calculated field](Image/netexportorimport.JPG)
+![Figure 18: Net export/import calculated field](Image/netexportorimport.JPG)
 
 12. Drag [Net exports/imports] into Rows and select dual axis.Right click on the axis and select synchronize axis (Figure 19).
 
-![Figure 18: Synchronize axis](Image/synchronizeaxis.JPG)
+![Figure 19: Synchronize axis](Image/synchronizeaxis.JPG)
 
 13. On the Marks card for [net exports/imports], click the Mark Type drop-down and select bar.
 
-![Figure 19: Change mark type to bar](Image/editmarkscard.JPG)
+![Figure 20: Change mark type to bar](Image/editmarkscard.JPG){width=50%}
 
 14. Drag [net exports/imports] to Color on the Marks. On the Marks card, click Color > Edit Colors.
     (a) Update stepped color option to 2 steps as we want to show negative and positive values in different colors
     (b) Click on the drop down under palette and select the red-green diverging option.
     (c) Adjust the slider under opacity to 50%.
 
-![Figure 20: Change colors](Image/editcolor.JPG)
-![Figure 21: Adjust opacity](Image/editopacity.JPG)
+![Figure 21: Change colors](Image/editcolor.JPG)
 
-15. Now that we have created the trellis, we will move on to add labels to each panel. Drag [Country] into the Measure Values Marks card and drop it into Label.This will label the [Exports] and [Imports] line graph within each panel in the trellis with the countries they are representing.
+![Figure 22: Adjust opacity](Image/editopacity.JPG){width=50%}
 
-![Figure 22: Label panels](Image/addcountryintolabel.JPG)
+15. Hide the net export/ imports axis on the right by deselecting Show Header.
 
-17. Hide the net export/ imports axis on the right by deselecting Show Header.
+![Figure 23: Hide](Image/hidetrellisx-axis.JPG){width=50%}
 
-![Figure 24: Hide](Image/hidetrellisx-axis.JPG)
-![Figure 25: Hide](Image/hidetrellisy-axis.JPG)
-![Figure 26: Hide field label for columns](Image/hidecolfieldlabel.JPG)
+![Figure 24: Hide](Image/hidetrellisy-axis.JPG){width=50%}
 
-18. As we only need 1 country label, instead of 2 as seen in Figure 22 above, we will proceed to right click on the import line graph label and select Mark Label > Never Show. Now we are left with 1 label for each panel <font size 9>.
+![Figure 25: Hide field label for columns](Image/hidecolfieldlabel.JPG){width=50%}
 
-![Figure 27: Hide label for import line graph](Image/hidelabel.JPG)
 
-19. Select and move the remaining label to the top left of each panel.
+16. Now that we have created the trellis, we will move on to add labels to each panel. We want to show the % change in exports and imports at the end of the export and import line respectively. Hence we will create 2 new calculated fields, [Export Diff Calculation] and [Import Diff Calculation]. Formulas are shown below:
 
-![Figure 28: Align remaining label to top left of each panel](Image/movelabels.JPG)
+![Figure 26: Create Export Diff Calculation calculated field](Image/ExportDiffCalc.JPG)
+![Figure 27: Create Import Diff Calculation calculated field](Image/ImportDiffCalc.JPG)
+
+17. Drag [Export Diff Calculation] and [Import Diff Calculation] into the Measure Values Marks card and drop it into Label.This will label the [Exports] and [Imports] line graph within each panel in the trellis with the countries they are representing.Click on Label and select Line Ends option, so labels will appear at the end of the line graph.
+
+![Figure 28: Label panels](Image/AddExportAndImportIntoLabel.JPG)
+
+18. As we only need 1 country label, instead of 2 as seen in Figure 27 above, we will proceed to right click on the import line graph label and select Mark Label > Never Show. Now we are left with 1 label for each panel <font size 9>. Align the label to top right corner of each panel.
+
+![Figure 29: Hide label for import line graph](Image/hidelabel.JPG)
+
+19. Next, we want to add a label to indicate which country each panel is representing. Drag [Country] into the Sum(Net exports/imports] Marks card, under Label. Move the label to the top left of each panel and bold it to make it more visible to users.
+
+![Figure 30: Align country label to top left of each panel](Image/movelabels.JPG)
 
 20. Next, we will amend the y-axis. Right click on y-axis and select Edit Axis. We will edit the y-axis for the following:
     (a) Under the General pane, update range. Select radio button for fixed and amend start and end to -3,000,000 and 8,500,000 respectively.
     (b) Update Title under Axis Titles to "S$'000".
     (c) Under the Tick Marks pane, select radio button for fixed and amend Tick Interval to 2,000,000. 
     
-![Figure 29: Update range and title of y-axis](Image/generalpane.JPG) ![Figure 30: Update tick interval of y-axis](Image/tickmarkspane.JPG)  
+![Figure 31: Update range and title of y-axis](Image/generalpane.JPG){width=50%}
+
+![Figure 32: Update tick interval of y-axis](Image/tickmarkspane.JPG){width=50%}
+
 21. Next, we will amend the x-axis. Right click on x-axis and select Edit Axis. We will edit the x-axis for the following:
     (a) Under the General pane, update range. Select radio button for fixed and amend start and end to 1/12/2018 and 31/1/2021 respectively. This is to provide a small gap at the start and end of each trellis panel. Next, uncheck Show times.
     (b) Update Title under Axis Titles to "Month".
     (c) Under the Tick Marks pane, select radio button for fixed and amend Tick origin to begin at 1/1/2019, and Tick Interval to 6 months. 
     
-![Figure 31: Update range and title of x-axis](Image/xgeneralpane.JPG) 
-![Figure 32: Update tick interval of x-axis](Image/xtickmarkspane.JPG) 
-# Final Visualisation
+![Figure 33: Update range and title of x-axis](Image/xgeneralpane.JPG){width=50%}
+
+![Figure 34: Update tick interval of x-axis](Image/xtickmarkspane.JPG){width=50%}
 
 22. Update the Legend Title by clicking on the small drop down arrow on the legend pane and selecting Edit Title.
 
 No  |Original Title           | Updated Title
-----|---------------------------------------------------------------
+----|-------------------------|-------------------------------------
 1   |Measure Names            | Trade Type
 2   |Sum(Net Exports/Imports) | Net Exports/Imports
 
-![Figure 33: Update legend title](Image/updatelegendtradetype.JPG) 
-![Figure 34: Update legend title](Image/updatelegendnetexport.JPG)
+![Figure 35: Update legend title](Image/updatelegendtradetype.JPG)
+
+![Figure 36: Update legend title](Image/updatelegendnetexport.JPG)
 
 23. Add title: Singapore's Merchandise Trade with Top Six Trading Countries, 2019-2020 <font size 15>.
 
-24. Edit Tooltip in the Measure Values (Figure 35) and Sum(Net Exports/Imports) Marks cards.
+24. Edit Tooltip in the Measure Values (Figure 37) and Sum(Net Exports/Imports) Marks cards (Figure 38).
 
-![Figure 35: Edit Tooltip for Measure Values Marks card](Image/tooltipmeasurevalues.JPG)
+![Figure 37: Edit Tooltip for Measure Values Marks card](Image/tooltipmeasurevalues.JPG)
 
-![Figure 36: Edit Tooltip for Sum(Net Exports/Imports) Marks card](Image/tooltipnetexports.JPG)
+![Figure 38: Edit Tooltip for Sum(Net Exports/Imports) Marks card](Image/tooltipnetexports.JPG)
 
 25. Align fonts used in graph to Tableau Light. Adjust size of labels and legends to <font size 9>.
 
-### Dashboard
+26. Add title: Singapore’s labour force gets older.The median age has increased from 41 in 2009 to 44 in 2019 due to the gradual shift towards older workers (55-64 and 65+ band) over the past 10 years.
+
+### 5.2 Dashboard
 
 1. Add sheets into dashboard- Drag the "Singapore's Trade with top 6 countries" sheet into the dashboard.
 
-2. Add commentary
+2. Add dashboard title
+   Using Objects > Text > drag to top of dashboard.
+   Add title: "Singapore's Merchandise Trade with Top Six Trading Countries, 2019-2020".
+   Adjust the title to be aligned in the middle. Click on title and select the Layout tab > Background > select a grey background for the dashboard title so that the title stands out from the rest of the graph.
 
 3. Add source
    Using Objects > Text > drag to bottom of dashboard and add:
@@ -248,7 +275,18 @@ No  |Original Title           | Updated Title
    The raw data: https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data
   
 4. Add author
-  Using Objects > Text > drag to bottom left of dashboard and add:
-  Dataviz Makeover 1| Stella Loh
+  Using Objects > Text > drag to bottom left of dashboard and add: Dataviz Makeover 1| Stella Loh
   
-### Observations
+# 6. Observations
+
+1. There does not appear to be a seasonality pattern in the exports and imports across both years (2019 and 2020), across the 6 countries. 
+
+2. Hong Kong and Taiwan have remained consistently in the net export and net import position respectively. 
+
+3. Singapore's trade with Malaysia is becoming increasing negative (net import position) in 2020, as compared to 2019. 
+
+4. Singapore has seen a rise in exports and drop in imports from United States, making Singapore a net exporter for most of 2020.
+
+5. Imports from Hong Kong are the lowest out of the 6 countries.
+
+6. Export and imports from Japan remain relatively stable month on month across both years.

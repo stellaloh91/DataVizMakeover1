@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/header-attrs-2.8/header-attrs.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/popper-2.6.0/popper.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Image/combineddata.JPG","Image/countrydata.JPG","Image/originalvisuals.JPG","Image/renamecolumns.JPG","Image/transposeddata.JPG"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/header-attrs-2.8/header-attrs.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/popper-2.6.0/popper.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Image/addcountry.JPG","Image/addcountryintolabel.JPG","Image/AddExportAndImportIntoLabel.JPG","Image/addnetexports.JPG","Image/changedatefield.JPG","Image/combineddata.JPG","Image/countrydata.JPG","Image/createcalculatedfield.JPG","Image/datacolumn.JPG","Image/editcolor.JPG","Image/editmarkscard.JPG","Image/editopacity.JPG","Image/ExportDiffCalc.JPG","Image/fillrow.JPG","Image/generalpane.JPG","Image/hidecolfieldlabel.JPG","Image/hidelabel.JPG","Image/hidesynchronizedaxis.JPG","Image/hidetrellisx-axis.JPG","Image/hidetrellisy-axis.JPG","Image/ImportDiffCalc.JPG","Image/importtableau.JPG","Image/movelabels.JPG","Image/netexportorimport.JPG","Image/originalvisuals.JPG","Image/renamecolumns.JPG","Image/synchronizeaxis.JPG","Image/tickmarkspane.JPG","Image/tooltipmeasurevalues.JPG","Image/tooltipnetexports.JPG","Image/transposeddata.JPG","Image/updatelegendnetexport.JPG","Image/updatelegendtradetype.JPG","Image/x-axis-edit.JPG","Image/x-axis-formula.JPG","Image/x-y-axis.JPG","Image/xgeneralpane.JPG","Image/xtickmarkspane.JPG","Image/y-axis-formula.JPG"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2140,8 +2140,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <img src="Image/proposeddesign.JPG" alt="Figure 2: Sketch of proposed design" /><figcaption aria-hidden="true">Figure 2: Sketch of proposed design</figcaption>
 </figure>
 <h3 id="advantages-of-proposed-design">Advantages of proposed design</h3>
-<p>3.1 Clarity i. Chart title is aligned with the chart content- chart shows only the relevant periods as aligned with title.</p>
-<ol start="2" type="i">
+<h3 id="clarity-1">3.1 Clarity</h3>
+<ol type="i">
+<li><p>Chart title is aligned with the chart content- chart shows only the relevant periods as aligned with title.</p></li>
 <li><p>Chart axis is aligned across all 6 countries-</p>
 <ol type="a">
 <li>y-axis scale is aligned across each country’s chart.</li>
@@ -2151,7 +2152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><p>Chart title provides audience with the big picture, followed by short commentary to provide more context.</p></li>
 <li><p>Data source is included in chart.</p></li>
 </ol>
-<p>3.2 Aesthetics</p>
+<h3 id="aesthetics-1">3.2 Aesthetics</h3>
 <ol type="i">
 <li><p>x-axis is aligned across each country’s chart- this makes the visualisation more organised and allows users to compare the trends across time for each country.</p></li>
 <li><p>Font size for chart title, commentary and chart annotations have been adjusted so as not to divert reader’s attention.</p></li>
@@ -2160,34 +2161,34 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><p>Colors are consistent throughout the dashboard with clear legend on what they represent. Minimal overlapping of colors.</p></li>
 <li><p>Tick marks added to y-axis scale. Soft gridlines have also been added to the chart to provide reference but not to distract users.</p></li>
 </ol>
-<h1 id="data-visualisation-steps">4. Data Visualisation Steps</h1>
+<h1 id="final-visualisation">4. Final Visualisation</h1>
+<h3 id="snapshot-of-dashboard">4.1 Snapshot of dashboard</h3>
+<figure>
+<img src="Image/finalviz.JPG" alt="Figure 3: Snapshot of dashboard- full visualisation available at Tableau Public" /><figcaption aria-hidden="true">Figure 3: Snapshot of dashboard- full visualisation available at Tableau Public</figcaption>
+</figure>
+<h1 id="data-visualisation-steps">5. Data Visualisation Steps</h1>
 <ol type="1">
 <li>After downloading the data, select data for the relevant countries from each dataset (import and export dataset) and paste into a new sheet using Microsoft Excel.</li>
 </ol>
 <figure>
-<img src="Image/countrydata.JPG" alt="Figure 3: Extract relevant data" /><figcaption aria-hidden="true">Figure 3: Extract relevant data</figcaption>
+<img src="Image/countrydata.JPG" alt="Figure 4: Extract relevant data" /><figcaption aria-hidden="true">Figure 4: Extract relevant data</figcaption>
 </figure>
 <ol start="2" type="1">
 <li>Transpose the extracted import and export data, naming the date column as “Date” and value column as “Imports”/ “Exports” respectively.</li>
 </ol>
 <figure>
-<img src="Image/tranposeddata.JPG" alt="Figure 4: Transposed data" /><figcaption aria-hidden="true">Figure 4: Transposed data</figcaption>
+<img src="Image/transposeddata.JPG" style="width:50.0%" alt="Figure 5: Transposed data" /><figcaption aria-hidden="true">Figure 5: Transposed data</figcaption>
 </figure>
 <ol start="3" type="1">
 <li>Combine the transposed import and export data.</li>
 </ol>
 <figure>
-<img src="Image/combineddata.JPG" alt="Figure 5: Combined data" /><figcaption aria-hidden="true">Figure 5: Combined data</figcaption>
+<img src="Image/combineddata.JPG" style="width:50.0%" alt="Figure 6: Combined data" /><figcaption aria-hidden="true">Figure 6: Combined data</figcaption>
 </figure>
 <ol start="4" type="1">
 <li>Perform the following actions:</li>
 </ol>
 <table>
-<colgroup>
-<col style="width: 7%" />
-<col style="width: 22%" />
-<col style="width: 70%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th>No</th>
@@ -2209,15 +2210,230 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr class="odd">
 <td>3</td>
 <td>Imports</td>
-<td>Rename column as “Imports (S<span class="math inline">\(&#39;000)&quot; 4 |Exports | Rename column as &quot;Exports (S\)</span>’000)”</td>
+<td>Rename column as “Imports (S$’000)”</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Exports</td>
+<td>Rename column as “Exports (S$’000)”</td>
 </tr>
 </tbody>
 </table>
 <figure>
-<img src="Image/renamecolumns.JPG" alt="Figure 6: Rename columns" /><figcaption aria-hidden="true">Figure 6: Rename columns</figcaption>
+<img src="Image/renamecolumns.JPG" style="width:50.0%" alt="Figure 7: Rename columns" /><figcaption aria-hidden="true">Figure 7: Rename columns</figcaption>
 </figure>
-<h1 id="final-visualisation">Final Visualisation</h1>
-<h3 id="observations">Observations</h3>
+<p>After the above manipulations have been performed, save the data as “data_clean”.</p>
+<h3 id="singapores-trade-with-top-6-countries-sheet">5.1 &lt;Singapore’s Trade with top 6 countries&gt; sheet</h3>
+<ol start="5" type="1">
+<li>Import the data into Tableau.</li>
+</ol>
+<figure>
+<img src="Image/importtableau.JPG" style="width:50.0%" alt="Figure 8: Import data into tableau" /><figcaption aria-hidden="true">Figure 8: Import data into tableau</figcaption>
+</figure>
+<ol start="6" type="1">
+<li>Change data type- change Date data type to “Date”.</li>
+</ol>
+<figure>
+<img src="Image/changedatefield.JPG" style="width:75.0%" alt="Figure 9: Create calculated field" /><figcaption aria-hidden="true">Figure 9: Create calculated field</figcaption>
+</figure>
+<ol start="7" type="1">
+<li>As we will be presenting the charts for six countries in the form of a trellis, we have to create two calculated fields called “x-axis” and “y-axis”.
+<ol type="a">
+<li>Create a new calculated field and name it “x-axis”, with the below formula (Figure 11).</li>
+<li>Create another calculated field named “y-axis”, with the below formula (Figure 12).</li>
+</ol></li>
+</ol>
+<figure>
+<img src="Image/createcalculatedfield.JPG" style="width:50.0%" alt="Figure 10: Create calculated field" /><figcaption aria-hidden="true">Figure 10: Create calculated field</figcaption>
+</figure>
+<figure>
+<img src="Image/x-axis-formula.JPG" alt="Figure 11: x-axis formula" /><figcaption aria-hidden="true">Figure 11: x-axis formula</figcaption>
+</figure>
+<figure>
+<img src="Image/y-axis-formula.JPG" alt="Figure 12: y-axis formula" /><figcaption aria-hidden="true">Figure 12: y-axis formula</figcaption>
+</figure>
+<ol start="7" type="1">
+<li>Drag [Date] to columns and change selection to month. Change data type to continuous.</li>
+</ol>
+<figure>
+<img src="Image/datacolumn.JPG" style="width:50.0%" alt="Figure 13: Drag date to columns" /><figcaption aria-hidden="true">Figure 13: Drag date to columns</figcaption>
+</figure>
+<ol start="8" type="1">
+<li>Drag [Exports($’000)] to rows, then drag [Imports($’000)] and drop it into the chart as seen in Figure 13 below. This creates a measure values shelf that appears in the data pane and contains all the measures of the data collected into one field.</li>
+</ol>
+<figure>
+<img src="Image/fillrow.JPG" style="width:50.0%" alt="Figure 14: Drag exports and imports to rows" /><figcaption aria-hidden="true">Figure 14: Drag exports and imports to rows</figcaption>
+</figure>
+<ol start="9" type="1">
+<li>Drag the calculated fields [x-axis] and [y-axis] to Columns and Rows respectively.Convert both fields into discrete fields.</li>
+</ol>
+<figure>
+<img src="Image/x-y-axis.JPG" style="width:75.0%" alt="Figure 15: Update fields" /><figcaption aria-hidden="true">Figure 15: Update fields</figcaption>
+</figure>
+<p>10.Drag [Country] into the marks card under detail.</p>
+<figure>
+<img src="Image/addcountry.JPG" style="width:50.0%" alt="Figure 16: Drag country into detail" /><figcaption aria-hidden="true">Figure 16: Drag country into detail</figcaption>
+</figure>
+<ol start="10" type="1">
+<li>Edit table calculation for both [x-axis] and [y-axis] calculated fields.Select computation using specific dimensions- by [Country] then by [Month of Date], at the level of [Country].</li>
+</ol>
+<figure>
+<img src="Image/x-axis-edit.JPG" style="width:50.0%" alt="Figure 17: Edit table calculation for x-axis and y-axis fields" /><figcaption aria-hidden="true">Figure 17: Edit table calculation for x-axis and y-axis fields</figcaption>
+</figure>
+<ol start="11" type="1">
+<li>Create another calculated field named [Net exports/imports], with the below formula.</li>
+</ol>
+<figure>
+<img src="Image/netexportorimport.JPG" alt="Figure 18: Net export/import calculated field" /><figcaption aria-hidden="true">Figure 18: Net export/import calculated field</figcaption>
+</figure>
+<ol start="12" type="1">
+<li>Drag [Net exports/imports] into Rows and select dual axis.Right click on the axis and select synchronize axis (Figure 19).</li>
+</ol>
+<figure>
+<img src="Image/synchronizeaxis.JPG" alt="Figure 19: Synchronize axis" /><figcaption aria-hidden="true">Figure 19: Synchronize axis</figcaption>
+</figure>
+<ol start="13" type="1">
+<li>On the Marks card for [net exports/imports], click the Mark Type drop-down and select bar.</li>
+</ol>
+<figure>
+<img src="Image/editmarkscard.JPG" style="width:50.0%" alt="Figure 20: Change mark type to bar" /><figcaption aria-hidden="true">Figure 20: Change mark type to bar</figcaption>
+</figure>
+<ol start="14" type="1">
+<li>Drag [net exports/imports] to Color on the Marks. On the Marks card, click Color &gt; Edit Colors.
+<ol type="a">
+<li>Update stepped color option to 2 steps as we want to show negative and positive values in different colors</li>
+<li>Click on the drop down under palette and select the red-green diverging option.</li>
+<li>Adjust the slider under opacity to 50%.</li>
+</ol></li>
+</ol>
+<figure>
+<img src="Image/editcolor.JPG" alt="Figure 21: Change colors" /><figcaption aria-hidden="true">Figure 21: Change colors</figcaption>
+</figure>
+<figure>
+<img src="Image/editopacity.JPG" style="width:50.0%" alt="Figure 22: Adjust opacity" /><figcaption aria-hidden="true">Figure 22: Adjust opacity</figcaption>
+</figure>
+<ol start="15" type="1">
+<li>Hide the net export/ imports axis on the right by deselecting Show Header.</li>
+</ol>
+<figure>
+<img src="Image/hidetrellisx-axis.JPG" style="width:50.0%" alt="Figure 23: Hide" /><figcaption aria-hidden="true">Figure 23: Hide</figcaption>
+</figure>
+<figure>
+<img src="Image/hidetrellisy-axis.JPG" style="width:50.0%" alt="Figure 24: Hide" /><figcaption aria-hidden="true">Figure 24: Hide</figcaption>
+</figure>
+<figure>
+<img src="Image/hidecolfieldlabel.JPG" style="width:50.0%" alt="Figure 25: Hide field label for columns" /><figcaption aria-hidden="true">Figure 25: Hide field label for columns</figcaption>
+</figure>
+<ol start="16" type="1">
+<li>Now that we have created the trellis, we will move on to add labels to each panel. We want to show the % change in exports and imports at the end of the export and import line respectively. Hence we will create 2 new calculated fields, [Export Diff Calculation] and [Import Diff Calculation]. Formulas are shown below:</li>
+</ol>
+<p><img src="Image/ExportDiffCalc.JPG" alt="Figure 26: Create Export Diff Calculation calculated field" /> <img src="Image/ImportDiffCalc.JPG" alt="Figure 27: Create Import Diff Calculation calculated field" /></p>
+<ol start="17" type="1">
+<li>Drag [Export Diff Calculation] and [Import Diff Calculation] into the Measure Values Marks card and drop it into Label.This will label the [Exports] and [Imports] line graph within each panel in the trellis with the countries they are representing.Click on Label and select Line Ends option, so labels will appear at the end of the line graph.</li>
+</ol>
+<figure>
+<img src="Image/AddExportAndImportIntoLabel.JPG" alt="Figure 28: Label panels" /><figcaption aria-hidden="true">Figure 28: Label panels</figcaption>
+</figure>
+<ol start="18" type="1">
+<li>As we only need 1 country label, instead of 2 as seen in Figure 27 above, we will proceed to right click on the import line graph label and select Mark Label &gt; Never Show. Now we are left with 1 label for each panel &lt;font size 9&gt;. Align the label to top right corner of each panel.</li>
+</ol>
+<figure>
+<img src="Image/hidelabel.JPG" alt="Figure 29: Hide label for import line graph" /><figcaption aria-hidden="true">Figure 29: Hide label for import line graph</figcaption>
+</figure>
+<ol start="19" type="1">
+<li>Next, we want to add a label to indicate which country each panel is representing. Drag [Country] into the Sum(Net exports/imports] Marks card, under Label. Move the label to the top left of each panel and bold it to make it more visible to users.</li>
+</ol>
+<figure>
+<img src="Image/movelabels.JPG" alt="Figure 30: Align country label to top left of each panel" /><figcaption aria-hidden="true">Figure 30: Align country label to top left of each panel</figcaption>
+</figure>
+<ol start="20" type="1">
+<li>Next, we will amend the y-axis. Right click on y-axis and select Edit Axis. We will edit the y-axis for the following:
+<ol type="a">
+<li>Under the General pane, update range. Select radio button for fixed and amend start and end to -3,000,000 and 8,500,000 respectively.</li>
+<li>Update Title under Axis Titles to “S$’000”.</li>
+<li>Under the Tick Marks pane, select radio button for fixed and amend Tick Interval to 2,000,000.</li>
+</ol></li>
+</ol>
+<figure>
+<img src="Image/generalpane.JPG" style="width:50.0%" alt="Figure 31: Update range and title of y-axis" /><figcaption aria-hidden="true">Figure 31: Update range and title of y-axis</figcaption>
+</figure>
+<figure>
+<img src="Image/tickmarkspane.JPG" style="width:50.0%" alt="Figure 32: Update tick interval of y-axis" /><figcaption aria-hidden="true">Figure 32: Update tick interval of y-axis</figcaption>
+</figure>
+<ol start="21" type="1">
+<li>Next, we will amend the x-axis. Right click on x-axis and select Edit Axis. We will edit the x-axis for the following:
+<ol type="a">
+<li>Under the General pane, update range. Select radio button for fixed and amend start and end to 1/12/2018 and 31/1/2021 respectively. This is to provide a small gap at the start and end of each trellis panel. Next, uncheck Show times.</li>
+<li>Update Title under Axis Titles to “Month”.</li>
+<li>Under the Tick Marks pane, select radio button for fixed and amend Tick origin to begin at 1/1/2019, and Tick Interval to 6 months.</li>
+</ol></li>
+</ol>
+<figure>
+<img src="Image/xgeneralpane.JPG" style="width:50.0%" alt="Figure 33: Update range and title of x-axis" /><figcaption aria-hidden="true">Figure 33: Update range and title of x-axis</figcaption>
+</figure>
+<figure>
+<img src="Image/xtickmarkspane.JPG" style="width:50.0%" alt="Figure 34: Update tick interval of x-axis" /><figcaption aria-hidden="true">Figure 34: Update tick interval of x-axis</figcaption>
+</figure>
+<ol start="22" type="1">
+<li>Update the Legend Title by clicking on the small drop down arrow on the legend pane and selecting Edit Title.</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>No</th>
+<th>Original Title</th>
+<th>Updated Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Measure Names</td>
+<td>Trade Type</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Sum(Net Exports/Imports)</td>
+<td>Net Exports/Imports</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="Image/updatelegendtradetype.JPG" alt="Figure 35: Update legend title" /><figcaption aria-hidden="true">Figure 35: Update legend title</figcaption>
+</figure>
+<figure>
+<img src="Image/updatelegendnetexport.JPG" alt="Figure 36: Update legend title" /><figcaption aria-hidden="true">Figure 36: Update legend title</figcaption>
+</figure>
+<ol start="23" type="1">
+<li><p>Add title: Singapore’s Merchandise Trade with Top Six Trading Countries, 2019-2020 &lt;font size 15&gt;.</p></li>
+<li><p>Edit Tooltip in the Measure Values (Figure 37) and Sum(Net Exports/Imports) Marks cards (Figure 38).</p></li>
+</ol>
+<figure>
+<img src="Image/tooltipmeasurevalues.JPG" alt="Figure 37: Edit Tooltip for Measure Values Marks card" /><figcaption aria-hidden="true">Figure 37: Edit Tooltip for Measure Values Marks card</figcaption>
+</figure>
+<figure>
+<img src="Image/tooltipnetexports.JPG" alt="Figure 38: Edit Tooltip for Sum(Net Exports/Imports) Marks card" /><figcaption aria-hidden="true">Figure 38: Edit Tooltip for Sum(Net Exports/Imports) Marks card</figcaption>
+</figure>
+<ol start="25" type="1">
+<li><p>Align fonts used in graph to Tableau Light. Adjust size of labels and legends to &lt;font size 9&gt;.</p></li>
+<li><p>Add title: Singapore’s labour force gets older.The median age has increased from 41 in 2009 to 44 in 2019 due to the gradual shift towards older workers (55-64 and 65+ band) over the past 10 years.</p></li>
+</ol>
+<h3 id="dashboard">5.2 Dashboard</h3>
+<ol type="1">
+<li><p>Add sheets into dashboard- Drag the “Singapore’s Trade with top 6 countries” sheet into the dashboard.</p></li>
+<li><p>Add dashboard title Using Objects &gt; Text &gt; drag to top of dashboard. Add title: “Singapore’s Merchandise Trade with Top Six Trading Countries, 2019-2020”. Adjust the title to be aligned in the middle. Click on title and select the Layout tab &gt; Background &gt; select a grey background for the dashboard title so that the title stands out from the rest of the graph.</p></li>
+<li><p>Add source Using Objects &gt; Text &gt; drag to bottom of dashboard and add: Source: Department of Statistics, Singapore (DOS) (<a href="https://www.singstat.gov.sg/" class="uri">https://www.singstat.gov.sg/</a>) The raw data: <a href="https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data" class="uri">https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data</a></p></li>
+<li><p>Add author Using Objects &gt; Text &gt; drag to bottom left of dashboard and add: Dataviz Makeover 1| Stella Loh</p></li>
+</ol>
+<h1 id="observations">6. Observations</h1>
+<ol type="1">
+<li><p>There does not appear to be a seasonality pattern in the exports and imports across both years (2019 and 2020), across the 6 countries.</p></li>
+<li><p>Hong Kong and Taiwan have remained consistently in the net export and net import position respectively.</p></li>
+<li><p>Singapore’s trade with Malaysia is becoming increasing negative (net import position) in 2020, as compared to 2019.</p></li>
+<li><p>Singapore has seen a rise in exports and drop in imports from United States, making Singapore a net exporter for most of 2020.</p></li>
+<li><p>Imports from Hong Kong are the lowest out of the 6 countries.</p></li>
+<li><p>Export and imports from Japan remain relatively stable month on month across both years.</p></li>
+</ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2226,15 +2442,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="d-appendix">
 </div>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
