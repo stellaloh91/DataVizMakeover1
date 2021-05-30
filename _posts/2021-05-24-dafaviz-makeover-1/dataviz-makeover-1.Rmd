@@ -15,8 +15,6 @@ output:
   distill::distill_article:
     self_contained: false
 ---
-<link rel="stylesheet" type="text/css" media="all" href="style.css"/>
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
