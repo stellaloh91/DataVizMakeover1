@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-06-08-dataviz-makeover2/",
+    "title": "dataviz-makeover2",
+    "description": "DataViz Makeover 1 for ISSS608: Visual Analytics",
+    "author": [
+      {
+        "name": "Stella Loh",
+        "url": "https://www.linkedin.com/in/stella-loh-308b72129/"
+      }
+    ],
+    "date": "2021-06-08",
+    "categories": [],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-06-08T23:46:21+08:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-05-24-dafaviz-makeover-1/",
     "title": "DataViz Makeover 1",
     "description": "DataViz Makeover 1 for ISSS608: Visual Analytics",
