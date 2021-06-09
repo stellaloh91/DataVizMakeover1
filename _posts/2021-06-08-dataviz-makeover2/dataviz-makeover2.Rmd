@@ -6,18 +6,91 @@ author:
   - name: Stella Loh
     url: https://www.linkedin.com/in/stella-loh-308b72129/
 date: "`r format(Sys.time(), '%m-%d-%y')`"
+categories:
+  - dataviz_makeover
+  - animation
+  - bubble chart
+  - trellis
+  - line graph
 output:
   distill::distill_article:
+    toc: true
+    toc_float: true
+    toc_depth: 2
     self_contained: false
 ---
 
+<style>
+
+body{
+  background-color: #F5F5F5;
+}
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# 1. Original Visualisation
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+![Figure 1: Original visualisation](Image/InitialViz.JPG)
 
+### Data Source
 
+The data visualisation above is created by using data provided by Department of Statistics, Singapore (DOS). 
+
+# 2. Critiques
+### 2.1 Clarity
+
+i. **No title and commentary** provided at the top for reader to understand the main idea of the visualisation.
+
+ii. **Chart is a static chart** hence user is unable to see the trending of exports, imports and net exports/ imports.
+
+iii. **Chart did not indicate which period range** the figures are derived from.
+
+iii. There is a note at the bottom of the chart which gives an idea of what the chart it meant to convey. In this case, the graph is showing a static picture of exports and imports of each country and whether Singapore is in net export or import position with these countries. No indication of which year this chart is representing, as well as historical information to show when Singapore’s trade with China and US has become net exporter and net importer respectively. Hence we are **unable to align what we have read in the “I” section with what is shown in the graph.**
+  
+iv. The data source has a note included which **lists the countries which are included under the EU category**. This was not included as a note in the chart for the user’s clarity.
+
+v. **Labelling of the axis is not clear.** “Export” label is written underneath the y-axis (which represents imports) and vice versa.
+
+vi. **Users will not know at first glance which country has the largest net trade balance.** They are able to compare export and import figures using their position on the x and y axis but not net trade, which requires some mental calculation.
+
+vii. **Chart did not specify what the labels are referring to**- if they are referring to exports/ imports or total merchandise trade.
+
+### 2.2 Aesthetics
+
+i. **Axis does not contain information on what currency this is measured in** and must be read off the labels. This can be included in the axis information.
+
+ii. Chart uses labels instead of legends to show which color is representative of each country. However, due to the size of each different colored circle and the addition of labels, the **chart looks cluttered**.
+
+iii. **Chart uses a note at the bottom to indicate that size of the bubbles is indicative of total merchandise trade value with the trading partner**. This makes it less intuitive as the user is not able to decipher that at first glance and hence has to read on to understand what the size of the bubble represents.
+
+iv. Most of the **bubbles overlap but the opacity of the bubbles is not adjusted.** This makes it difficult to read the chart. For example, for Republic of Korea, we are unable to see the center point of the circle which is supposed to show if the country is a net exporter or importer, especially since the bubble falls close to the cutoff line between net exporter and importer. Same issue for EU and Malaysia.
+
+v. **The labels block essential information.** For example, the label for United States is blocking the user from seeing the center point of the Taiwan bubble.
+
+vi. **There is poor use of colours in the chart.** Other than colors being used to differentiate region, background colors use another set of colors and is not particularly useful as it does not seem to serve any additional purpose. A reference line is sufficient to demarcate the cutoff between net exporters and importers.
+
+vii. **Too many symbols are used in this chart, and they look similar which may also confuse the user.** For example, the top net exporter and importer are each given a symbol and annotated next to the country’s bubble in the chart. This **adds on to the clutter of colors and shapes we already see in the chart.** Furthermore, exports and imports are given yet another set of symbols which have similar colors to top net exporters and importers respectively. Only minor differences are noted between each set of symbols. There is no need to have symbols for exports and imports as they do not serve any purpose and the user is better off simply reading the axis labels.
+
+viii. **Poor placement of commentary**- The “I” section acts as a commentary to provide users on the context of the chart and what it is trying to show and hence placement should be below the title and before the chart so that the user will read this section first before looking at the chart.
+
+ix.	**Size of the bubbles are too big and opacity is not adjusted for overlaps** and hence creates overlap, obscuring information and clutters the chart.
+
+# 3. Proposed Design
+
+### Sketch
+![Figure 2: Sketch of proposed design](Image/proposeddesign.JPG)
+
+### Advantages of proposed design
+
+### 3.1 Clarity
+### 3.2 Aesthetics
+# 4. Final Visualisation
+
+### 4.1 Snapshot of dashboard
+
+![Figure 3: Snapshot of dashboard- full visualisation available at Tableau Public](Image/finalviz.JPG)
+
+# 5. Data Visualisation Steps
