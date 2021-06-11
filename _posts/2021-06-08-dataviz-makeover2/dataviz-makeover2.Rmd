@@ -94,3 +94,33 @@ ix.	**Size of the bubbles are too big and opacity is not adjusted for overlaps**
 ![Figure 3: Snapshot of dashboard- full visualisation available at Tableau Public](Image/finalviz.JPG)
 
 # 5. Data Visualisation Steps
+
+### Tableau Prep
+
+1. After downloading the data, select data for the relevant countries from each dataset (import and export dataset) and paste into a new sheet using Microsoft Excel.
+
+2. Drag the file into Tableau Prep and drag the relevant sheets onto the white space. 
+
+![Figure 4: Drag sheets into space](Image/SelectSheets.JPG)
+
+3. Click on + to add the next steps. Select the pivot option and drag the period columns into the pivot fields area. This step is to tell Tableau Prep which fields should be pivoted.
+
+![Figure 5: Select columns to pivot](Image/PivotSheets.JPG)
+
+4.Click on + to add the next steps. Select the clean option. We will use this step to rename the pivoted columns as Exports and Imports respectively.
+
+![Figure 6: Rename columns](Image/CleanStep.JPG)
+
+5. Next, we will join both datasets using the join function, with the below join clauses.
+
+![Figure 7: Inner join both datasets](Image/JoinClauses.JPG)
+
+6. Next, add a clean step. We will now clean up the joined dataset. 
+    - Merge the 2 variable columns into 1 by dragging “variables-1” into “variables”.
+    - Merge the pivot name columns into 1 by dragging “pivot1-names1” into “pivot1-names 2”.
+    - Trim the columns to remove unnecessary spaces.
+    - Split “variables” column using “(“ as separator. Remove the original column and rename the new column as “Region”
+    - Rename “Pivot1 Name- 1” column into “Month”.
+    - Update the datatypes:
+        - Exports and Imports- from string to Number decimal type
+        - Month- from string to Date type
