@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # 1. Original Visualisation
 
-![Figure 1: Original visualisation](Image/InitialViz.JPG)
+![Figure 1: Original visualisation](Image/InitialViz.JPG){width=75%}
 
 ### Data Source
 
@@ -96,7 +96,7 @@ v. Instead of using labels which may cause clutter in the chart, we have used th
 
 ### 3.2 Aesthetics
 
-i. Axis contains all information on denomination of the figures- both SGD and that the figures are denominated in millions.
+i. Axis contains all information on denomination of the figures- both SGD and that the figures are denominated in billions.
 
 ii. Size of bubbles has been adjusted smaller to reduce chart clutter. Labels have been revised to take up a smaller area compared to original visualization, hence reducing clutter.
 
@@ -122,7 +122,7 @@ vii. Proposed visualization has removed the top net exporter and importer symbol
 
 1. After downloading the data, select data for the relevant countries from each dataset (import and export dataset) and paste into a new sheet using Microsoft Excel.
 
-![Figure 4: Select data for relevant countries](Image/SanitiseData.JPG){width = 75%}
+![Figure 4: Select data for relevant countries](Image/SanitiseData.JPG){width=75%}
 
 2. Open Tableau Prep and connect the file to Tableau Prep. Drag the relevant sheets onto the main pane. 
 
@@ -134,10 +134,9 @@ vii. Proposed visualization has removed the top net exporter and importer symbol
 
 4. Click on + to add the next step. Next, we will join both datasets using the join function, with the below join clauses (Figure 7). The flow should now look similar to Figure 8.
 
-![Figure 7: Inner join both datasets](Image/JoinClauses.JPG)
-{width = 75%}
+![Figure 7: Inner join both datasets](Image/JoinClauses.JPG){width=75%}
 
-![Figure 8: Current steps](Image/DiagramJoinStep.JPG){width = 75%}
+![Figure 8: Current steps](Image/DiagramJoinStep.JPG)
 
 6. Next, add a clean step. We will now make the following changes to the joined dataset. 
     - Merge the two columns named "Variables" and "Variables-1" into one column as they represent the same information. Drag “Variables-1” into “Variables”.
@@ -148,9 +147,9 @@ vii. Proposed visualization has removed the top net exporter and importer symbol
     - Rename “Pivot1 Names-1” column into “Date”.
 The current dataset should look similar to Figure 11. 
     
-![Figure 9: Trim formula](Image/TrimVariables.JPG){width = 50%}
+![Figure 9: Trim formula](Image/TrimVariables.JPG){width=50%}
 
-![Figure 10: Split column selection](Image/SplitColumn.JPG){width = 50%}
+![Figure 10: Split column selection](Image/SplitColumn.JPG){width=60%}
 
 ![Figure 11: Dataset setup](Image/CurrentSetUp.JPG)
 
@@ -161,13 +160,13 @@ The current dataset should look similar to Figure 11.
     - Create two new calculated fields and name them “Imports Aligned” and “Exports Aligned”. This is to align the denomination of Europe (presented in millions) with the other regions (in thousands). The formulas should be as shown in Figure 12 (Imports Aligned) and Figure 13 (Exports Aligned) below.
     - Remove the original "Exports" and "Imports" columns.
 
-![Figure 10: Create Imports Aligned Calculated Field](Image/ImportsAligned.JPG){width = 75%}
+![Figure 10: Create Imports Aligned Calculated Field](Image/ImportsAligned.JPG)
 
-![Figure 11: Create Exports Aligned Calculated Field](Image/ExportsAligned.JPG){width = 75%}
+![Figure 11: Create Exports Aligned Calculated Field](Image/ExportsAligned.JPG)
 
 8. Click on + to add the next step. Select the Output option. We will save the results in Tableau Data Extract format (.hyper). Select this format under “Output Type” and update the Name and Location of this saved file if need be. Leave the other options as default selections. See Figure 12 for the selections made. Once finalized, click Run Flow.
 
-![Figure 12: Output file selections](Image/OutputSelections.JPG){width = 50%}
+![Figure 12: Output file selections](Image/OutputSelections.JPG){width=30%}
 
 9. Save the Tableau Flow File by selecting File> Save As> Input Name of file and location to save in. This is so that we can refer back to this Tableau Prep Flow File if we need to make any amendments.
 
@@ -177,19 +176,19 @@ The current dataset should look similar to Figure 11.
 
 1. Open Tableau Data Extract file saved previously. This should open up Tableau Desktop directly. The connections and extract table should already have been added in the file. Tableau Prep outputs Hyper files, and can publish data sources to Tableau Server or Tableau Online, connected to from Tableau Desktop. The Data Source tab should look like Figure 13 below (Tableau Extract file name will differ depending on what you have named the file).
 
-![Figure 13: Data Source tab](Image/AutoConnect.JPG){width = 30%}
+![Figure 13: Data Source tab](Image/AutoConnect.JPG){width=50%}
 
 2. Create a new sheet.As we will be presenting the charts for ten countries in the form of a trellis, we have to create two calculated fields called “x-axis” and “y-axis”.
     a. Create a new calculated field and name it “x-axis”, with the below formula (Figure 14).
     b. Create another calculated field named “y-axis”, with the below formula (Figure 15).
     
-![Figure 14: x-axis calculated field formula](Image/Createx-axis.JPG)
+![Figure 14: x-axis calculated field formula](Image/Createx-axis.JPG){width=75%}
 
-![Figure 15: y-axis calculated field formula](Image/Createy-axis.JPG)
+![Figure 15: y-axis calculated field formula](Image/Createy-axis.JPG){width=75%}
 
 3. Drag [Date] to columns and change selection to month. Change data type to continuous.
 
-![Figure 16: Drag Date to columns](Image/DateToCol.JPG){width = 75%}
+![Figure 16: Drag Date to columns](Image/DateToCol.JPG){width=75%}
 
 4. Drag [Exports Aligned] to rows, then drag [Imports Aligned] and drop it into the chart as seen in Figure 17 below. This creates a Measure Values shelf that appears in the data pane and contains all the measures of the data collected into one field.
 
@@ -201,15 +200,15 @@ The current dataset should look similar to Figure 11.
 
 6. Drag [Region] into the Marks card under detail.
 
-![Figure 18: Drag Region into detail](Image/RegionDetail.JPG){width = 30%}
+![Figure 18: Drag Region into detail](Image/RegionDetail.JPG){width=30%}
 
 7. Click on the small arrow next to [x-axis] and [y-axis] in Columns and Rows respectively. Select Edit table calculation for both [x-axis] and [y-axis] calculated fields. Select computation using Specific Dimensions- by [Region] then by [Month of Date], at the level of [Region].
 
-![Figure 19: Edit table calculation for x-axis and y-axis fields](Image/EditTableCalc.JPG){width = 30%}
+![Figure 19: Edit table calculation for x-axis and y-axis fields](Image/EditTableCalc.JPG){width=30%}
 
 8. Create another calculated field named [Net Exports/Imports], with the below formula.
 
-![Figure 20: Net Exports/Imports calculated field](Image/NetExportsImportsCalc.JPG)
+![Figure 20: Net Exports/Imports calculated field](Image/NetExportsImportsCalc.JPG){width=75%}
 
 9. Drag [Net Exports/Imports] into Rows and select dual axis by clicking on the small arrow next to the field name. Right click on the axis and select synchronize axis (Figure 21).
 
@@ -217,94 +216,96 @@ The current dataset should look similar to Figure 11.
 
 10. On the Marks card for [Net Exports/Imports], click the Mark Type drop-down and select bar.
 
-![Figure 22: Change Mark type to bar](Image/MarksCardBar.JPG){width = 30%}
+![Figure 22: Change Mark type to bar](Image/MarksCardBar.JPG){width=30%}
 
 11.Drag [Net Exports/Imports] to Color on the Marks card. On the Marks card, click Color > Edit Colors.
     a. Update stepped color option to 2 steps as we want to show negative and positive values in different colors.
     b. Click on the drop down under palette and select the red-green diverging option (Figure 23).
     c. Adjust the slider under opacity to 50% (Figure 24).
     
-![Figure 23: Update colors](Image/UpdateNetExportColors.JPG){width = 75%}
+![Figure 23: Update colors](Image/UpdateNetExportColors.JPG){width=60%}
 
-![Figure 24: Update opacity](Image/UpdateOpacity.JPG){width = 30%}
+![Figure 24: Update opacity](Image/UpdateOpacity.JPG){width=30%}
 
 12. Hide the below axis headers and field labels by deselecting Show Header and selecting hide field labels respectively.
 
 ![Figure 25: Hide Column Field Labels](Image/HideColFieldLabels.JPG)
 
-![Figure 26: Hide header](Image/HideColFieldHeader.JPG){width = 75%}
+![Figure 26: Hide header](Image/HideColFieldHeader.JPG)
 
-![Figure 27: Hide header](Image/HideDualAxisHeader.JPG){width = 30%}
+![Figure 27: Hide header](Image/HideDualAxisHeader.JPG)
 
-![Figure 28: Hide header](Image/HideRowHeader.JPG){width = 30%}
+![Figure 28: Hide header](Image/HideRowHeader.JPG){width=30%}
 
 13. Next, we want to add a label to indicate which country each panel is representing. Drag [Region] into the Sum(Net Exports/Imports] Marks card, under Label. Click on Label and select Most Recent option, so labels will appear at the end of the bar chart, to avoid cluttering the graph with labels.
 
-![Figure 29: Add Country Label](Image/AddLabels.JPG){width = 30%}
+![Figure 29: Add Country Label](Image/AddLabels.JPG){width=30%}
 
 14. Drag [Date] into the Pages pane and select Month format by clicking on the arrow next to Date.
 
-![Figure 30: Drag Date to Pages pane and select Month format](Image/DatetoPages.JPG){width = 30%}
+![Figure 30: Drag Date to Pages pane and select Month format](Image/DatetoPages.JPG){width=30%}
 
 15. Update the Measure Values Marks Card and change Mark Type to Circle instead of Automatic.
 
-![Figure 31: Update Mark Type to Circle](Image/MeasureValuesToCircle.JPG){width = 30%}
+![Figure 31: Update Mark Type to Circle](Image/MeasureValuesToCircle.JPG){width=30%}
 
 16. On the animation window that appears on the right of the sheet (below Measure Names), tick on Show history option and click on the arrow next to Show history. Make the following selections:
     a. Marks to show history for: Change to All
     b. Show: Both
-![Figure 32: Make the above animation selections ](Image/AnimationSelection.JPG){width = 30%}
+    
+![Figure 32: Make the above animation selections ](Image/AnimationSelection.JPG){width=50%}
 
 16. Next, we will amend the y-axis. Right click on y-axis and select Edit Axis. We will edit the y-axis for the following:
     a. Under the General pane, update range. Select radio button for fixed and amend start and end to -5 and 10 respectively.
-    b. Update Title under Axis Titles to “SGD (Millions)”.
+    b. Update Title under Axis Titles to “SGD (Billions)”.
     b. Under the Tick Marks pane, select radio button for fixed and amend Tick Interval to 5.
     
-![Figure 33: Update range and title of y-axis ](Image/yGeneralPane.JPG){width = 75%}
+![Figure 33: Update range and title of y-axis ](Image/yGeneralPane.JPG){width=75%}
 
-![Figure 34: Update tick interval of y-axis ](Image/yTickMarksPane.JPG){width = 75%}
+![Figure 34: Update tick interval of y-axis ](Image/yTickMarksPane.JPG){width=75%}
 
 17. Next, we will amend the x-axis. Right click on x-axis and select Edit Axis. We will edit the x-axis for the following:
     a. Under the General pane, update range. Select radio button for fixed and amend start and end to 1/7/2010 and 30/6/2021 respectively. This is to provide a small gap at the start and end of each trellis panel. Next, uncheck Show times.
     b. Update Title under Axis Titles to “Month”.
     c. Under the Tick Marks pane, select radio button for fixed and amend Tick origin to begin at 1/1/2019, and Tick Interval to 2 years.
     
-![Figure 35: Update range and title of x-axis ](Image/xGeneralPane.JPG){width = 75%}
+![Figure 35: Update range and title of x-axis ](Image/xGeneralPane.JPG){width=75%}
 
-![Figure 36: Update tick interval of x-axis ](Image/xTickMarksPane.JPG){width = 75%}    
+![Figure 36: Update tick interval of x-axis ](Image/xTickMarksPane.JPG){width=75%}    
 
 18. Update the Legend Title by clicking on the small drop down arrow on the legend pane and selecting Edit Title.
 
-![Figure 37: Update legend title](Image/TradeType.JPG){width = 75%}
+![Figure 37: Update legend title](Image/TradeType.JPG){width=75%}
 
-![Figure 38: Update legend title](Image/UpdateLegend.JPG){width = 75%}
+![Figure 38: Update legend title](Image/UpdateLegend.JPG){width=75%}
 
-![Figure 39: Update legend title](Image/UpdateLegend-animation.JPG){width = 75%}
+![Figure 39: Update legend title](Image/UpdateLegend-animation.JPG){width=75%}
 
 19. Create two calculated fields [Net Export position] and [Net Import position], with the formulas shown in Figure 40 and Figure 41 respectively. Drag these two fields into the Sum(Net Exports/Imports) Marks card under Tooltip.
 
-![Figure 40: Create Net Export position calculated field](Image/NetExportPosition.JPG)
-![Figure 41: Create Net Import position calculated field](Image/NetImportPosition.JPG)  
+![Figure 40: Create Net Export position calculated field](Image/NetExportPosition.JPG){width=75%}
+
+![Figure 41: Create Net Import position calculated field](Image/NetImportPosition.JPG){width=75%}
 
 Click on Tooltip > Insert the above calculated fields under Net Exports/Imports and color <AGG(Net Export position)> and <AGG(Net Import position)> green and red respectively (Figure 42). Align the other tooltip fields to Figure 42 below. Edit Tooltip in the Measure Values Marks card (Figure 43).
 
-![Figure 42: Edit Tooltip for Sum(Net Exports/Imports) Marks card](Image/ToolTipNetExport.JPG){width = 75%}
+![Figure 42: Edit Tooltip for Sum(Net Exports/Imports) Marks card](Image/ToolTipNetExport.JPG){width=75%}
 
-![Figure 43: Edit Tooltip for Measure Values Marks card](Image/MeasureValuesTooltip.JPG){width = 75%}
+![Figure 43: Edit Tooltip for Measure Values Marks card](Image/MeasureValuesTooltip.JPG){width=75%}
 
 20. Align fonts used in graph to Tableau Light. Adjust size of labels and legends to font size 9.
 
 21. Sort trellis by [Exports Aligned]. Under Measure Values Marks card, Select [Region] > Sort > Sort by Field > Descending order > Input Field Name as “Exports Aligned” > Select Sum under Aggregation. This sorts the trellis panel by exports across the ten countries.
 
-![Figure 43: Sort by Exports Aligned](Image/SortExports.JPG){width = 50%}
+![Figure 43: Sort by Exports Aligned](Image/SortExports.JPG){width=50%}
 
 22. Right click on the main chart pane > select format > click on the arrow next to Fields and select the Sum (Exports Aligned). Under the Pane tab, click on the dropdown next to Numbers and select Number (Custom), then update Decimal Places to 2. Do this for Sum (Imports Aligned), Sum (Net Exports/ Imports), AGG(Net Export position) and AGG(Net Import position) too. This is to align all tooltips to 2 decimal places.
 
-![Figure 43: Format variables to 2 decimal places](Image/FormatDP.JPG){width = 30%}
+![Figure 43: Format variables to 2 decimal places](Image/FormatDP.JPG){width=30%}
 
 22. Add Title: “Singapore's  Exports, Imports and Net Trade Position with Regions, from 2011-2020”. Apply bolding and change font size to 12. Change font color to white. Right click on title pane > select Format Title > Under Title section, select blue next to Shading.
 
-![Figure 44: Format Title](Image/FormatTitle.JPG){width = 30%}
+![Figure 44: Format Title](Image/FormatTitle.JPG){width=30%}
 
 *Bar Chart*
 
@@ -312,60 +313,60 @@ Click on Tooltip > Insert the above calculated fields under Net Exports/Imports 
 
 24. Drag [Region] into the Marks card and drop it under Label.
 
-![Figure 44: Drag Region to Label](Image/MarkscardLabel.JPG){width = 30%}
+![Figure 44: Drag Region to Label](Image/MarkscardLabel.JPG){width=30%}
 
 25. Create a new calculated field names [Ranking], with the below formula. Drag [Ranking] into Rows.
 
-![Figure 45: Create Ranking Calculated field](Image/RankingCalc.JPG) 
+![Figure 45: Create Ranking Calculated field](Image/RankingCalc.JPG){width=75%} 
 
 26. Click on the small arrow next to Ranking and select discrete. Click on Edit Table Calculation > Specific Dimensions > Select Region.
 
-![Figure 46: Edit Ranking Table Calculation](Image/RankingTableCalc.JPG){width = 30%} 
+![Figure 46: Edit Ranking Table Calculation](Image/RankingTableCalc.JPG){width=30%} 
 
 27. Drag [Net Exports/ Imports] into Marks card and drop it under Color.
 
-![Figure 47: Drag Net Exports/ Imports to Color](Image/MarkscardColor.JPG){width = 30%}  
+![Figure 47: Drag Net Exports/ Imports to Color](Image/MarkscardColor.JPG){width=30%}  
 
 28. Drag [Date] into the Pages pane and select Month format by clicking on the arrow next to Date.
 
-![Figure 48: Drag Date to Pages pane and select Month format](Image/DatetoPagesBar.JPG){width = 30%}
+![Figure 48: Drag Date to Pages pane and select Month format](Image/DatetoPagesBar.JPG){width=30%}
 
 29. Update view format to Fit Height to make better use of the space
 
-![Figure 49: Update view to Fit Height](Image/FitHeight.JPG)
+![Figure 49: Update view to Fit Height](Image/FitHeight.JPG){width=75%}
 
 30. Next, we will amend the x-axis. Right click on x-axis and select Edit Axis. We will edit the x-axis for the following:
     a. Under the General pane, update range. Select radio button for fixed and amend start and end-7 and 7 respectively.
-    b. Update Title under Axis Titles to “Net Exports/ Imports (SGD Millions)”.
+    b. Update Title under Axis Titles to “Net Exports/ Imports (SGD Billions)”.
     c. Under the Tick Marks pane, select radio button for fixed and amend Tick origin to begin at 0, and Tick Interval to 1.
     
-![Figure 50: Update range of x-axis ](Image/xGeneralPaneBar.JPG){width = 50%}
+![Figure 50: Update range of x-axis ](Image/xGeneralPaneBar.JPG){width=75%}
 
-![Figure 51: Update tick interval of x-axis ](Image/xTickMarksPaneBar.JPG){width = 50%}
+![Figure 51: Update tick interval of x-axis ](Image/xTickMarksPaneBar.JPG){width=75%}
 
 31. Update the Legend Title by clicking on the small drop down arrow on the legend pane and selecting Edit Title.
 
-![Figure 52: Update legend title](Image/TradeTypeBar.JPG)
+![Figure 52: Update legend title](Image/TradeTypeBar.JPG){width=75%}
 
-![Figure 53: Update legend title](Image/UpdateLegendBar-animation.JPG)
+![Figure 53: Update legend title](Image/UpdateLegendBar-animation.JPG){width=75%}
 
 32. Align fonts used in graph to Tableau Light. Adjust size of labels and legends to font size 9.
 
 33. Click on Tooltip and update the tooltip fields to Figure 54 below.
 
-![Figure 54: Edit Tooltip](Image/ToolTipBar.JPG)
+![Figure 54: Edit Tooltip](Image/ToolTipBar.JPG){width=75%}
 
 34. Click on Format > Animations > Turn On Animations > Update Style to Simultaneous.
 
-![Figure 55: Update Animations settings](Image/AnimationSettings.JPG){width = 30%}
+![Figure 55: Update Animations settings](Image/AnimationSettings.JPG){width=30%}
 
 35. Right click on the main chart pane > select format > click on the arrow next to Fields and select the Sum (Net Exports/ Imports). Under the Pane tab, click on the dropdown next to Numbers and select Number (Custom), then update Decimal Places to 2. This is to align all tooltips to 2 decimal places.
 
-![Figure 43: Format variables to 2 decimal places](Image/FormatDPBar.JPG){width = 30%}
+![Figure 43: Format variables to 2 decimal places](Image/FormatDPBar.JPG){width=30%}
 
 36. Under Measure Values Marks card, click on Size and drag the slider all the way to the left.
 
-![Figure 44: Format variables to 2 decimal places](Image/MeasureValuesSlider.JPG){width = 30%} 
+![Figure 44: Format variables to 2 decimal places](Image/MeasureValuesSlider.JPG){width=30%} 
 
 37. Add Title: “Ranking of Singapore's Net Trade Position with Regions”. Apply bolding and change font size to 12. Right click on title pane > select Format Title > Under Title section, select blue next to Shading.
 
@@ -378,77 +379,78 @@ Click on Tooltip > Insert the above calculated fields under Net Exports/Imports 
 
 39. Create a new calculated field names [Total Merchandise Trade], with the below formula. Drag [Total Merchandise Trade] into Marks card under Size.
 
-![Figure 44: Create calculated field](Image/TotalMerchTrade.JPG)  
+![Figure 44: Create calculated field](Image/TotalMerchTrade.JPG){width=75%} 
 
 40. Drag [Exports Aligned] into Columns and select Dual Axis. Synchronize the axis.
 
 ![Figure 45: Drag Exports Aligned to Columns](Image/ExportstoCol.JPG)  
 41. Remove Measure Names and Sum(Total Merchanise Trade) from the All Marks card. Navigate to the Sum (Exports Aligned) Marks card. Click on Size > Adjust the slider all the way to the left. Click on Color > Change Opacity to 0%.
 
-![Figure 46: Change Size](Image/UpdateSize.JPG){width = 30%}
+![Figure 46: Change Size](Image/UpdateSize.JPG){width=30%}
 
-![Figure 47: Change Opacity](Image/UpdateColor.JPG){width = 30%}
+![Figure 47: Change Opacity](Image/UpdateColor.JPG){width=30%}
 
 42. Right click on the Bubble Chart > Select Trend Lines > Show Trend Lines > Sum(Export Aligned).
 
-![Figure 48: Add 45 degree Trend Line](Image/AddTrendLines.JPG)
+![Figure 48: Add 45 degree Trend Line](Image/AddTrendLines.JPG){width=75%}
 
 43. Drag [Date] into the Pages pane and select Month format by clicking on the arrow next to Date.
 
-![Figure 48: Drag Date to Pages pane and select Month format](Image/DatetoPagesBubble.JPG){width = 30%}
+![Figure 48: Drag Date to Pages pane and select Month format](Image/DatetoPagesBubble.JPG){width=30%}
 
 43.Next, we will amend the y-axis. Right click on y-axis and select Edit Axis. We will edit the y-axis for the following:
     a. Under the General pane, update range. Select radio button for fixed and amend start and end to 0 and 9 respectively.
-    b. Update Title under Axis Titles to “Exports (SGD Millions)”.
+    b. Update Title under Axis Titles to “Exports (SGD Billions)”.
     c. Under the Tick Marks pane, select radio button for fixed and amend Tick Interval to 1.
     
-![Figure 49: Update range and title of y-axis ](Image/yGeneralPaneBubble.JPG){width = 75%}
+![Figure 49: Update range and title of y-axis ](Image/yGeneralPaneBubble.JPG){width=75%}
 
-![Figure 50: Update tick interval of y-axis ](Image/yTickMarksPaneBubble.JPG){width = 75%}
+![Figure 50: Update tick interval of y-axis ](Image/yTickMarksPaneBubble.JPG){width=75%}
 
 44. Next, we will amend the x-axis. Right click on x-axis and select Edit Axis. We will edit the x-axis for the following:
     a. Under the General pane, update range. Select radio button for fixed and amend start and end to 0 and 9 respectively. 
     b. Update Title under Axis Titles to “Imports (SGD Millions)”.
     c. Under the Tick Marks pane, select radio button for fixed and amend Tick origin to begin at 0, and Tick Interval to 1.
     
-![Figure 51: Update range and title of x-axis ](Image/xGeneralPaneBubble.JPG){width = 75%}
+![Figure 51: Update range and title of x-axis ](Image/xGeneralPaneBubble.JPG){width=75%}
 
-![Figure 52: Update tick interval of x-axis ](Image/xTickMarksPaneBubble.JPG){width = 75%}
+![Figure 52: Update tick interval of x-axis ](Image/xTickMarksPaneBubble.JPG){width=75%}
 
 45. Right click on the Trend Line > Select Format > Under the Sheet Tab, under Trend Lines, select the broken line and a dark gray color for the Trend Lines. We will use broken lines and color  to differentiate Trend Lines. 
 
-![Figure 53: Format Trend Lines](Image/FormatTrendLines.JPG){width = 60%}
+![Figure 53: Format Trend Lines](Image/FormatTrendLines.JPG){width=30%}
 
 46. Drag [Total Merchandise Trade] field into the Sum(Imports Aligned) Marks card and drop it under Size. Click on Size and adjust the slider as seen in Figure 54. Update the Mark Type to Circle and edit the Opacity to 50%. Click on the dropdown next to Border and select black color, as seen in Figure 55.
 
-![Figure 54: Drop Total Merchandise Trade into Size in Marks card](Image/TotalMerchTradeSize.JPG){width = 30%}
+![Figure 54: Drop Total Merchandise Trade into Size in Marks card](Image/TotalMerchTradeSize.JPG){width=30%}
 
-![Figure 55: Update Opacity and Border Color](Image/ChangeToBubble.JPG){width = 30%}
+![Figure 55: Update Opacity and Border Color](Image/ChangeToBubble.JPG){width=30%}
 
 47. Right click on the Export Aligned header at the top of the Bubble Chart and deselect Show Header.
 
-![Figure 56: Hide Export Aligned Header](Image/HideHeader.JPG)
+![Figure 56: Hide Export Aligned Header](Image/HideHeader.JPG){width=80%}
 
 48. Update the Legend Title by clicking on the small drop down arrow on the legend pane and selecting Edit Title.
 
-![Figure 57: Update legend title](Image/UpdateLegendDate.JPG)
-![Figure 58: Update legend title](Image/UpdateLegendMerchTrade.JPG)
+![Figure 57: Update legend title](Image/UpdateLegendDate.JPG){width=75%}
+
+![Figure 58: Update legend title](Image/UpdateLegendMerchTrade.JPG){width=75%}
 
 49. Right click on [Total Merchandise Trade] legend > select Edit Sizes > Select box next to STart Value in Legend and End Value in Legend and input 2 and 14 respectively > click ok.
 
-![Figure 59: Edit Size](Image/EditSize.JPG)
+![Figure 59: Edit Size](Image/EditSize.JPG){width=75%}
 
 50. On the animation window that appears on the right of the sheet (below Region), click on Show history option and click on the arrow next to Show history. Make the following selections:
     a. Marks to show history for: Change to Last 6
     b. Show: Trails
     
-![Figure 60: Make the above animation selections ](Image/AnimationSelectionBubble.JPG){width = 80%}
+![Figure 60: Make the above animation selections ](Image/AnimationSelectionBubble.JPG){width=50%}
 
 51. Next, we want to label each bubble with the country they are representing. We also want to align the color of the label to the bubble color. In order to do so, create a calculated field for each country with the formula as per Figure 61. Drag the calculated fields and drop them under Label in the Sum(Imports Aligned) Marks card.
 
-![Figure 61: Create 10 new calculated fields with the above formula, updating for the relevant country](Image/CountryCalcField.JPG)
+![Figure 61: Create 10 new calculated fields with the above formula, updating for the relevant country](Image/CountryCalcField.JPG){width=75%}
 
-![Figure 62: Drag Label Calculated fields to Label](Image/CountryToToolTip.JPG){width = 30%}
+![Figure 62: Drag Label Calculated fields to Label](Image/CountryToToolTip.JPG){width=30%}
 
 52. In the Sum(Imports Aligned) Marks card, click on Label. Click on the "..." next to Text to edit labels. Align the colors in the Edit Label pane to the colors representing each country in the bubble chart. To do that, click on "..." to edit label. Highlight the relevant country label and click on the arrow next to the color block at the top of the pane. Select More colors > Pick Screen Color. This will create a cursor which you can direct to the color representing each region in the Region legend. Right click on the color in the Legend and this color will be applied to the selected country label. Apply bolding to the labels. After doing so, the Edit Label pane should look like Figure 63 below. Click ok, then select Allow labels to overlap other marks option under the Options section.
 
@@ -456,13 +458,13 @@ Click on Tooltip > Insert the above calculated fields under Net Exports/Imports 
 
 53. Click on Tooltip under Sum(Imports Aligned) Marks card and edit Tooltips to align with Figure 64 below. Remove all variables from Tooltip under the Sum(Export Aligned) Marks card (Figure 65).
 
-![Figure 64: Update Tooltip- Sum(Imports Aligned) Marks card](Image/BubbleTooltip.JPG){width = 75%}
+![Figure 64: Update Tooltip- Sum(Imports Aligned) Marks card](Image/BubbleTooltip.JPG){width=75%}
 
-![Figure 65: Update Tooltip- Sum(Export Aligned) Marks card](Image/ExportsAlignedMarkscard.JPG){width = 75%}
+![Figure 65: Update Tooltip- Sum(Export Aligned) Marks card](Image/ExportsAlignedMarkscard.JPG){width=75%}
 
 54. Right click on the main chart pane > select format > click on the arrow next to Fields and select the [Sum (Export Aligned)]. Under the Pane tab, click on the dropdown next to Numbers under Default section and select Number (Custom), then update Decimal Places to 2. This is to align all tooltips to 2 decimal places. Do the same for [Sum(Imports Aligned)] and [Total Merchandise Trade].
 
-![Figure 66: Format variables to 2 decimal{width = 75%} places](Image/FormatDPBubble.JPG) 
+![Figure 66: Format variables to 2 decimal places](Image/FormatDPBubble.JPG){width=75%}
 
 55. Align fonts used in graph to Tableau Light. Adjust size of labels and legends to font size 9.
 
@@ -472,7 +474,7 @@ Click on Tooltip > Insert the above calculated fields under Net Exports/Imports 
 
 57. Change dashboard size to Automatic.
 
-![Figure 67: Change Dashboard Size](Image/DashboardSize.JPG){width = 75%}
+![Figure 67: Change Dashboard Size](Image/DashboardSize.JPG){width=50%}
 
 58. Arrange layout according to sketch. Drag and drop sheets into frame. Remove all legends except for [Total Trade Merchandise (SGD Millions)]. Click on the legend > click on the arrow next to the box > select floating and drag the box to the bubble chart as shown in Figure 68.
 
@@ -495,11 +497,11 @@ Click on the text box > click on the arrow next to the box > select floating and
 Add title: "Singapore's Trade with Regions, from 2011-2020".<br/>
 Adjust the title to be aligned in the middle, apply bolding, change font size to 15, and change font color to white. Click on title and select the Layout tab on the left pane > Background > select a blue background and white font for the dashboard title so that the title stands out.
 
-![Figure 69: Format dashboard title background](Image/DashboardTitle.JPG){width = 30%}
+![Figure 69: Format dashboard title background](Image/DashboardTitle.JPG){width=30%}
 
 63. We will now add some highlight functions to the dashboard. Select Dashboard > Actions > Add Action. Update the Edit Highlight Action pane to the below. We want to be able to run the highlighting action on Hover and from any chart in the dashboard. Highlighted fields in the other charts will be based on Region.
 
-![Figure 69: Update Edit Highlight Action pane](Image/EditHighlight.JPG){width = 50%}
+![Figure 69: Update Edit Highlight Action pane](Image/EditHighlight.JPG){width=50%}
 
 64. Add annotations. Right click on the bubble plot in the dashboard > select Annotate > Area. Add annotations indicating the areas for Net Exports and Net Imports. Apply bolding, change font to Tableau Light, font size to 9 and color to green. For consistency, we will select the same shade of green as that used in the Red-Green diverging color scheme used in the line chart.
 
@@ -508,3 +510,34 @@ Do the same for the ranking bar chart. Updated dashboard with annotations added 
 ![Figure 69: Add annotations](Image/AddAnnotations.JPG) 
 
 # 6. Observations
+
+One way to study the Singapore's trade patterns with various trading partners is to track how net trade changes across time. The above dashboard does this by plotting the exports, imports and net trade of Singapore's trade with various regions, for the period 2011-2020. 
+
+This dashboard consists of three charts:
+    i. Bubbleplot showing each region's export and import
+    ii. Line graph showing exports, imports and net trade over time.
+    iii. Bar chart showing the ranking of each region by net trade with Singapore.
+
+1. Imports from Taiwan reached a new high in Dec 2020 (S\$4.9 m=billion) and has been on a steady uptrend in year 2020. Although exports to Taiwan has also reached a new high in Dec 2020 (S\$2.73 billion), the rate of increase in imports exceeds that of exports in year 2020, resulting in a growing trade deficit with Taiwan. This can be observed from the steeper slope of the import line compared to export line in year 2020. 
+
+A possible reason for the increase in imports could be due to the Covid-19 pandemic. Taiwan was able to successfully control the pandemic as compared to some of Singapore's other trade partners. Hence some of the imports may have been diverted to Taiwan. 
+
+2. Both exports and imports from Malaysia saw a steep decline in Apr'2020 and rebounded strongly in June'2020. This may be due to the circuit breaker and MCO period in Singapore and Malaysia respectively where citizens were encouraged to stay home and many shops were closed for business. The circuit breaker period in Singapore lasted from Apr'20 to May'20 and measures were relaxed in Jun'20. 
+
+Singapore has consistently been in a net trade deficit with Malaysia since early 2020. Singapore imports over 90% of the food consumed in the country [link](https://www.sfa.gov.sg/food-farming/singapore-food-supply/the-food-we-eat#:~:text=With%20little%20farming%20land%2C%20Singapore,13%25%20of%20all%20the%20vegetables) and hence the lack of transportation options, coupled with the severity of the pandemic in some of the trading partners, may have resulted in increased imports from Malaysia due its geographical proximity.
+
+3. Singapore's net trade deficit with United States has been showing a decreasing trend since 2019, and eventually becoming a net trade surplus for most of 2020. This is due to declining imports, with the largest decline between Apr'20 and May'20. We also see an increasing trend for exports to United States with a steady increase since Aug'19 and peaking in Jul'20.
+
+4. We have also observed a declining trade deficit with Europe, brought about by a sharp dip in imports between Jan'2020 to May'2020. This may be due to heightened pandemic measures leading to the circuit breaker period in Singapore. As most shops were closed during this period and Singaporeans were encouraged to stay in, this may have reduced demand for machinery and vehicles, which are the main imports from Europe [link] (https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Singapore-EU_-_international_trade_in_goods_statistics#EU-Singapore_trade_by_type_of_goods).
+
+We also noticed that net trade deficit with Europe forms a double hump pattern- increasing steadily from 2010 and peaking in Oct'13, then steadily declining to a low in May'2016. This is followed by a steady increase and peaking once more in Jul'18 and downtrend till Jun'20.
+
+5. Singapore's net trade balance with Hong Kong consistently ranks top out of the ten regions included in this analysis. Europe and United States were typically at the bottom of the ranking but United States has consistently been replaced by Taiwan since Jan'2019.
+
+6. Singapore's net trade balance with Indonesia is on a declining trend across the 10 years, mainly brought about by declining exports. Singapore's main exports to Indonesia are refined petroleum, petrochemicals and telecommunications equipment [link](https://www.enterprisesg.gov.sg/-/media/esg/files/media-centre/media-releases/2020/feb-2020/mr-002a20-singapore-and-indonesia/annex-b---latest-bilateral-trade-information-between-indonesia-and-singapore.pdf?la=en).
+
+7. Singapore's trade deficit with Republic of Korea has turned to a consistent trade surplus since 2018. This is mainly due to declining imports while exports have remained relatively consistent.
+
+8. Sharp increase in exports to Thailand in Mar'20, followed by a steep decline till May'20. We see a similar spike in imports from Thailand in Apr'20, followed by a sharp decline to Jun'20. Main exports and imports from Thailand is refined petroleum.Weak refining margins prompted Thai refiners to reduce their operating rates and carry out some minor maintenance, causing lower crude import volumes in May'20.
+
+9. Spike in exports to Mainland China between Jul'20 to Aug'20 and maintaining at a higher range since then. This may be due to China being one of the first countries to recover economically from the pandemic. China’s economy picked up speed in the fourth quarter, with growth beating expectations. [link](https://www.straitstimes.com/business/economy/china-becomes-only-major-economy-to-avoid-recession-in-2020-growth-accelerates-in). This may explain the increase in exports to China during the last quarter of 2020.
