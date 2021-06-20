@@ -552,9 +552,13 @@ Adjust the title to be aligned in the middle, apply bolding, change font size to
 
 ![Figure 100: Update Edit Highlight Action pane](Image/EditHighlight.JPG){width=50%}
 
-70. Add annotations. Right click on the bubble plot in the dashboard > select Annotate > Area. Add annotations indicating the areas for Net Exports and Net Imports. Apply bolding, change font to Tableau Light, font size to 10 and color to green/red for net exports and net imports respectively. For consistency, we will select the same shade of green/red as that used in the Red-Green diverging color scheme used in the line chart. Updated dashboard with annotations added should look like Figure 101.
+70. Next, we will customize the date slider. Right click on arrow next to the date container. Select Customize > Click on Show History Controls. This will remove the checkbox for Show History.
 
-![Figure 101: Add annotations](Image/finalviz.JPG) 
+![Figure 101: Customize slider](Image/SliderCustomise.JPG)
+
+71. Add annotations. Right click on the bubble plot in the dashboard > select Annotate > Area. Add annotations indicating the areas for Net Exports and Net Imports. Apply bolding, change font to Tableau Light, font size to 10 and color to green/red for net exports and net imports respectively. For consistency, we will select the same shade of green/red as that used in the Red-Green diverging color scheme used in the line chart. Updated dashboard with annotations added should look like Figure 102.
+
+![Figure 102: Add annotations](Image/finalviz.JPG)
 
 Note: We have decided not to utilize the simultaneous style animation offered in Tableau Desktop. Utilizing this style would not allow us to see the history of net trade in the line charts, which offers users insights into how the net trade for each region is trending.
 
@@ -576,23 +580,23 @@ We have derived the following insights from the dashboard presented:
 </br>
 A possible reason for the increase in imports could be due to the Covid-19 pandemic. Taiwan was able to successfully control the pandemic as compared to some of Singapore's other trade partners. Hence some of the imports may have been diverted to Taiwan. 
 
-![Figure 102: Taiwan line chart](Image/Obs1.JPG){width=75%}
+![Figure 103: Taiwan line chart](Image/Obs1.JPG){width=75%}
 
 2. Both exports and imports from Malaysia saw a steep decline in Apr'20 and rebounded strongly in Jun'20. This may be due to the circuit breaker and MCO period in Singapore and Malaysia respectively where citizens were encouraged to stay home and many shops were closed for business, resulting in lower imports by both Singapore and Malaysia. The circuit breaker period in Singapore began in Apr'20 and measures were [relaxed in Jun'20](https://www.channelnewsasia.com/news/singapore/covid-19-circuit-breaker-chronicles-charting-evolution-12779048), which coincides with the strong rebound in imports.
 </br>
 Singapore has consistently been in a net trade deficit with Malaysia since early 2020. Singapore [imports over 90% of the food consumed](https://www.sfa.gov.sg/food-farming/singapore-food-supply/the-food-we-eat#:~:text=With%20little%20farming%20land%2C%20Singapore,13%25%20of%20all%20the%20vegetables) in the country and hence the lack of transportation options, coupled with the severity of the pandemic in some of the trading partners, may have resulted in increased imports from Malaysia due its geographical proximity.
 
-![Figure 103: Malaysia line chart](Image/Obs2.JPG)
+![Figure 104: Malaysia line chart](Image/Obs2.JPG)
 
 3. Singapore's net trade deficit with United States has been showing a decreasing trend since Aug'19, and eventually becoming a net trade surplus for most of 2020. This is due to declining imports, with the largest decline (S$1.45 billion) between Mar'20 and May'20. We also see an increasing trend for exports to United States with a steady increase since Feb'17 and peaking in Jul'20 (S\$5.94 billion).
 
-![Figure 104: United States line chart](Image/Obs3.JPG)
+![Figure 105: United States line chart](Image/Obs3.JPG)
 
 4. We have also observed a declining trade deficit with Europe, brought about by declining imports. Imports peaked in Jul'18 (S$8.69 billion) and has seen a downtrend since. We noticed a sharp dip in imports between May'19 to Jun'19 (S\$7.99 billion to S\$6.05 billion), before recovering slightly and another sharp dip between Jan'20 to May'20 (S\$6.86 billion to S\$4.63 billion). This may be due to heightened pandemic measures leading to the circuit breaker period in Singapore. As most shops were closed during this period and citizens were encouraged to stay in, this may have reduced demand for machinery and vehicles, which are the [main imports from Europe](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Singapore-EU_-_international_trade_in_goods_statistics#EU-Singapore_trade_by_type_of_goods).
 </br>
 We also noticed that net trade deficit with Europe forms a double hump pattern- increasing steadily from 2011 and peaking in Oct'13 (-S$4.37 billion), then steadily declining to a low in May'16. This is followed by a steady increase and peaking once more in Jul'18 (-S\$4.52 billion) and downtrend till Sep'20.
 
-![Figure 105: Europe line chart](Image/Obs4.JPG)
+![Figure 106: Europe line chart](Image/Obs4.JPG)
 
 5. The bubble chart shows the trending for each region's exports and imports over the past ten years. We are able to see the patterns that each region makes over the period, namely:
     i. Exports to Hong Kong over the past 10 years has hovered around S\$3.9 to S\$6.4 billion, while imports have consistently remained below S$1 billion. Hence, Singapore's net trade balance with Hong Kong consistently ranks top out of the ten regions included in this analysis.
@@ -605,26 +609,26 @@ We also noticed that net trade deficit with Europe forms a double hump pattern- 
     viii. Thailand saw a sharp increase in imports in Apr'20, and increase in exports in Mar'20, both which lasted for a month before seeing a sharp decline the following month.
     ix. Exports to Indonesia is declining at a faster rate compared to imports. This can be seen from the trail history whereby there is a big shift down compared to leftward movement.
 
-![Figure 106: Insights from bubble chart](Image/Obs5.JPG)
+![Figure 107: Insights from bubble chart](Image/Obs5.JPG)
 
 6. Singapore's net trade balance with Indonesia is on a declining trend across the 10 years, mainly brought about by declining exports. Exports peaked in Jul'13 (S$5.49 billion) and has been generally downtrend since. This is consistent with what we observed in the bubble chart where exports are declining at a faster rate compared to imports.  Singapore's [main exports](https://www.enterprisesg.gov.sg/-/media/esg/files/media-centre/media-releases/2020/feb-2020/mr-002a20-singapore-and-indonesia/annex-b---latest-bilateral-trade-information-between-indonesia-and-singapore.pdf?la=en) to Indonesia are refined petroleum, petrochemicals and telecommunications equipment.
 
-![Figure 107: Indonesia line chart](Image/Obs6.JPG)
+![Figure 108: Indonesia line chart](Image/Obs6.JPG)
 
 7. Singapore's trade deficit with Republic of Korea has turned to a consistent trade surplus since 2018. This is mainly due to declining imports while exports have remained relatively consistent. Imports peaked in Nov'12 (S$3.52 billion) and has been generally downtrend since.
 
-![Figure 108: Korea line chart](Image/Obs7.JPG)
+![Figure 109: Korea line chart](Image/Obs7.JPG)
 
 8. Sharp increase in exports to Thailand from S\$1.70 billion to S\$2.51 billion between Feb'20 to Mar'20, followed by a steep decline till May'20 (S\$2.51 billion to S\$1.22 billion). We see a similar spike in imports from Thailand from S\$1.09 billion to S\$1.98 billion between Mar'20 and Apr'20, followed by a sharp decline to S$0.80 billion in Jun'20. Main exports and imports from Thailand is refined petroleum. [Weak refining margins](https://www.argusmedia.com/en/news/2129192-thailand-cuts-crude-imports-in-may) may have prompted Thai refiners to lower crude import volumes in May'20, coinciding with the drop in exports observed.
 
-![Figure 109: Thailand line chart](Image/Obs8.JPG)
+![Figure 110: Thailand line chart](Image/Obs8.JPG)
 
 9. Sharp decline in exports and imports to/from Mainland China observed between Dec'19 to Feb'20. Exports decreased from S$7.00 billion to S\$3.91 billion while imports reduced from S\$5.99 billion to S\$3.98 billion. This decline coincides with the [lockdown](https://apnews.com/article/pandemics-wuhan-china-coronavirus-pandemic-e6147ec0ff88affb99c811149424239d) in certain Chinese cities due to the severity of the pandemic.
 </br>
 Imports quickly rebounded to S\$5.98 billion in Mar'20 while exports only showed a rebound and new high following Jul'20. Exports to Mainland China increased sharply between Jul'20 (S\$5.40 billion) to Aug'20 (S\$7.97 billion) and has been maintaining at a higher range since then. This may be due to China being one of the first countries to recover economically from the pandemic. China’s economy picked up speed in the fourth quarter of 2020, with [growth beating expectations](https://www.straitstimes.com/business/economy/china-becomes-only-major-economy-to-avoid-recession-in-2020-growth-accelerates-in). This may explain the increase in exports to China during the second half of 2020.
 
-![Figure 110: China line chart](Image/Obs9.JPG)
+![Figure 111: China line chart](Image/Obs9.JPG)
 
 10. Mainland China has overtaken Malaysia to rank second highest in terms of cumulative merchandise trade over the period, since Apr'15. It has been able to widen the gap between second and third place since. United States has overtaken Indonesia to rank forth in terms of cumulative merchandise trade over the period, since Oct'15.
 
-![Figure 111: Cumulative Merchandise Trade Bar Chart](Image/Obs10.JPG)
+![Figure 112: Cumulative Merchandise Trade Bar Chart](Image/Obs10.JPG)
